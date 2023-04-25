@@ -1,10 +1,7 @@
 /* FOR DESKTOPS: */
 
-.list {
-  display: flex;
-  margin: 105px auto 0;
-  gap: 16px;
-  position: relative;
+.item {
+  display: none;
 }
 
 .item:nth-child(-n + 4) {
@@ -12,10 +9,6 @@
   flex-direction: column;
   font-size: 24px;
   flex: 1;
-}
-
-.item {
-  display: none;
 }
 
 .item > img {
@@ -38,37 +31,8 @@
   cursor: pointer;
 }
 
-.circle {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: var(--stroke-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 30%;
-  right: -20px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-}
-
-.arrow {
-  border: solid var(--text-color);
-  border-width: 0 2px 2px 0;
-  border-radius: 2px;
-  padding: 5px;
-  transform: rotate(-45deg);
-  position: absolute;
-  left: calc(50% - 17px / 2);
-}
-
 @media (max-width: 768px) {
   /* FOR MOBILES: */
-
-  .list {
-    margin-top: 32px;
-  }
 
   .item {
     font-size: 12px;
@@ -94,26 +58,10 @@
   .hotel--location {
     margin-top: 4px;
   }
-
-  .circle {
-    width: 28px;
-    height: 28px;
-    right: 0;
-    top: 22%;
-  }
-
-  .arrow {
-    height: 13px;
-    width: 5px;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   /* FOR TABLETS: */
-
-  .list {
-    margin: 50px auto 0;
-  }
 
   .item:nth-child(3) {
     display: none;

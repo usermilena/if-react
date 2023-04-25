@@ -1,4 +1,4 @@
-@import url('../../fonts.css');
+@import url('fonts.css');
 
 * {
   font-family: 'Roboto', sans-serif;
@@ -121,11 +121,6 @@ a {
   width: calc(var(--col-lg) * 14);
 }
 
-.homes {
-  background-color: var(--bg-color);
-  padding: 120px 0;
-}
-
 @media (max-width: 768px) {
   /* FOR MOBILES: */
 
@@ -152,17 +147,6 @@ a {
   .col-sm-6 {
     width: calc(var(--col-sm) * 6);
   }
-
-  .homes {
-    padding: 40px 16px 56px;
-  }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  /* FOR TABLETS: */
-
-  .homes {
-    padding: 60px 0;
-  }
-}
 
