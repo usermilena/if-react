@@ -1,0 +1,16 @@
+/* FOR DESKTOPS */
+
+.top__search--destination {
+  outline: none;
+  border-radius: 8px;
+  width: 100%;
+  padding: 17px 0 20px 24px;
+}
+
+@media (max-width: 768px) {
+  /* FOR MOBILES */
+
+  .top__search--destination {
+    display: none;
+  }
+}

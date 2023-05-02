@@ -1,0 +1,41 @@
+/* FOR DESKTOPS*/
+
+.top__search--amount__filter--options__wrapper {
+  display: flex;
+  align-items: center;
+  width: 215px;
+  justify-content: space-between;
+}
+
+.top__search--amount__filter--options__wrapper:nth-child(2) {
+  margin: 12px 0;
+}
+
+.top__search--amount__filter--count__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 108px;
+  justify-content: space-between;
+}
+
+#minusAdults,
+#minusChildren,
+#minusRooms {
+  color: #cecece;
+  border-color: #cecece;
+}
+
+.top__search--amount__filter--button {
+  font-size: 18px;
+  text-align: center;
+  color: var(--accent-blue);
+  background-color: var(--general-white);
+  border: 1px solid var(--accent-blue);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}

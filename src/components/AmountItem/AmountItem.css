@@ -1,0 +1,66 @@
+/* FOR DESKTOPS*/
+
+.top__search--amount {
+  display: flex;
+  align-items: center;
+}
+
+.top__search--amount--input {
+  outline: none;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  /* FOR MOBILES*/
+
+  .top__search--amount {
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    border-right: 1px solid var(--secondary-text);
+    padding-left: 8px;
+  }
+
+  .top__search--amount:last-child {
+    border-right: none;
+  }
+
+  .top__search--amount--input {
+    font-weight: 500;
+    font-size: 15px;
+    text-align: left;
+  }
+
+  .top__search--amount__label {
+    font-size: 12px;
+    padding-bottom: 4px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* FOR TABLETS*/
+
+  .top__search--amount {
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    border-right: 1px solid var(--secondary-text);
+    padding-left: 8px;
+  }
+
+  .top__search--amount:last-child {
+    border-right: none;
+  }
+
+  .top__search--amount--input {
+    font-weight: 500;
+    font-size: 17px;
+    text-align: left;
+  }
+
+  .top__search--amount__label {
+    font-size: 14px;
+    padding-bottom: 4px;
+  }
+}

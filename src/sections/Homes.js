@@ -1,9 +1,9 @@
 import React from "react";
 
-import HotelsList from "../../components/HotelsList/HotelsList";
-import Section from "../../components/Section/Section";
+import HotelsList from "../components/HotelsList/HotelsList";
+import Section from "../components/Section/Section";
 
-import { data } from "../../constants/data";
+import { data } from "../constants/data";
 
 const Homes = () => {
   return (
