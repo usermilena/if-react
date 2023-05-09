@@ -1,9 +1,10 @@
 import React from "react";
+
 import classNames from "classnames";
 
-import "./HotelsList.css";
-
 import HotelCard from "../HotelCard/HotelCard";
+
+import "./HotelsList.css";
 
 const HotelsList = ({ data, className }) => {
   return (

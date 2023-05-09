@@ -1,9 +1,9 @@
 import React from "react";
 
-import "./SearchAmount.css"
-
 import AmountItem from "../../AmountItem/AmountItem";
 import AmountFilter from "../../AmountFilter/AmountFilter";
+
+import "./SearchAmount.css"
 
 const SearchAmount = () => {
   return (

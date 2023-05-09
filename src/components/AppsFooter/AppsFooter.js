@@ -1,9 +1,8 @@
 import React from "react";
 
-import "./AppsFooter.css"
+import { AppStoreIcon, GooglePlayIcon } from "../Icons/Icons";
 
-import AppStoreIcon from "../SVG/AppStoreIcon/AppStoreIcon";
-import GooglePlayIcon from "../SVG/GooglePlayIcon/GooglePlayIcon";
+import "./AppsFooter.css"
 
 const AppsFooter = () => {
   return (

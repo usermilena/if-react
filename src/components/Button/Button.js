@@ -2,17 +2,13 @@ import React from "react";
 
 import "./Button.css"
 
-const Button = ({ setIsVisible }) => {
-  const hotelsEvent = () => {
-  setIsVisible(true)
-  }
-
+const Button = ({ onClick, text, className='top__search--button' }) => {
   return (
     <button
-      className="top__search--button"
       type="button"
-      onClick={hotelsEvent}
-    >Search
+      onClick={onClick}
+      className={className}
+    >{text}
     </button>
   );
 };

@@ -1,11 +1,10 @@
 import React from "react";
 
-import "./SearchDestination.css"
+import Input from "../../Input/Input";
+import { SearchIcon } from "../../Icons/Icons";
+import Label from "../../Label/Label";
 
-import DestinationInput from "../../DestinationInput/DestinationInput";
-import DestinationInputMobile from "../../DestinationInputMobile/DestinationInputMobile";
-import DestinationLabel from "../../DestinationLabel/DestinationLabel";
-import SearchIcon from "../../SVG/SearchIcon/SearchIcon";
+import "./SearchDestination.css"
 
 const SearchDestination = ({destinationInputValue,setDestinationInputValue}) => {
   return (
@@ -14,9 +13,12 @@ const SearchDestination = ({destinationInputValue,setDestinationInputValue}) => 
       className="top__search--destination__wrapper"
     >
       <SearchIcon/>
-      <DestinationLabel/>
-      <DestinationInput destinationInputValue={destinationInputValue} setDestinationInputValue={setDestinationInputValue}/>
-      <DestinationInputMobile/>
+      <Label htmlFor="destination" text="Your destination or hotel name" />
+      <Input onChange={event => setDestinationInputValue(event.target.value)}
+             id="destination"
+             placeholder="New York"
+             destinationInputValue={destinationInputValue}
+             setDestinationInputValue={setDestinationInputValue}/>
     </div>
   );
 };

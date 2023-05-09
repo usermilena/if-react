@@ -1,19 +1,19 @@
 import React from "react";
 
+import Input from "../Input/Input";
+import Label from "../Label/Label";
+
 import "./AmountItem.css"
 
 const AmountItem = ({ id, value , text}) => {
   return (
     <div className="top__search--amount">
-      <input
-        className="top__search--amount--input"
-        id={id}
-        value={value}
-        readOnly
+      <Input className="top__search--amount--input"
+             id={id}
+             value={value}
+             readOnly='true'
       />
-      <label className="top__search--amount__label" htmlFor={id}
-      >{text}&nbsp;</label
-      >
+      <Label className="top__search--amount__label" htmlFor={id} text={text}/>
     </div>
   );
 };

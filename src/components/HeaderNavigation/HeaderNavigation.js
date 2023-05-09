@@ -1,10 +1,8 @@
 import React from "react";
 
-import "./HeaderNavigation.css"
+import { AccountIcon, MenuIcon, ModeIcon } from "../Icons/Icons";
 
-import AccountIcon from "../SVG/AccountIcon/AccountIcon";
-import MenuIcon from "../SVG/MenuIcon/MenuIcon";
-import ModeIcon from "../SVG/ModeIcon/ModeIcon";
+import "./HeaderNavigation.css"
 
 const HeaderNavigation = () => {
   return (

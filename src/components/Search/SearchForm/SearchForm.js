@@ -1,19 +1,30 @@
 import React from "react";
 
-import "./SearchForm.css"
-
 import Button from "../../Button/Button";
 import SearchAmount from "../SearchAmount/SearchAmount";
-import SearchDestination from "../SearchDestination/SearchDestination";
 import SearchDate from "../SearchDate/SearchDate";
+import SearchDestination from "../SearchDestination/SearchDestination";
 
-const SearchForm = ({ setIsVisible,destinationInputValue,setDestinationInputValue }) => {
+import "./SearchForm.css";
+
+const SearchForm = ({
+  setIsVisible,
+  destinationInputValue,
+  setDestinationInputValue,
+}) => {
+  const availableHotelsEvent = () => {
+    setIsVisible(true);
+  };
+
   return (
     <form className="top__search">
-      <SearchDestination destinationInputValue={destinationInputValue} setDestinationInputValue={setDestinationInputValue}/>
-      <SearchDate/>
-      <SearchAmount/>
-      <Button setIsVisible={setIsVisible}/>
+      <SearchDestination
+        destinationInputValue={destinationInputValue}
+        setDestinationInputValue={setDestinationInputValue}
+      />
+      <SearchDate />
+      <SearchAmount />
+      <Button onClick={availableHotelsEvent} text="Search" />
     </form>
   );
 };

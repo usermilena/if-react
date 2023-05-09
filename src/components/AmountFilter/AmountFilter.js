@@ -1,9 +1,10 @@
 import React from "react";
 
-import "./AmountFilter.css"
-
 import AmountFilterOptions from "../AmountFilterOptions/AmountFilterOptions";
 import ChildrenAgeSelector from "../ChildrenAgeSelector/ChildrenAgeSelector";
+import Label from "../Label/Label";
+
+import "./AmountFilter.css"
 
 const AmountFilter = () => {
   return (
@@ -15,12 +16,9 @@ const AmountFilter = () => {
         id="filterChildren"
         className="top__search--amount__filter--children"
       >
-        <label
-          className="top__search--amount__filter--children__label"
-          htmlFor="childrenAge"
-        >What is the age of the child you’re<br />travelling
-          with?</label
-        >
+        <Label className="top__search--amount__filter--children__label"
+               htmlFor="childrenAge"
+               text="What is the age of the child you’re travelling with?"/>
         <ChildrenAgeSelector/>
         <ChildrenAgeSelector/>
         <ChildrenAgeSelector/>

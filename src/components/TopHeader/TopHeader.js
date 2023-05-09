@@ -1,9 +1,9 @@
 import React from "react";
 
-import "./TopHeader.css"
-
-import LogoIcon from "../SVG/LogoIcon/LogoIcon";
+import { LogoIcon } from "../Icons/Icons";
 import HeaderNavigation from "../HeaderNavigation/HeaderNavigation";
+
+import "./TopHeader.css"
 
 const TopHeader = () => {
   return (

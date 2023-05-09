@@ -11,6 +11,7 @@
   /* FOR MOBILES */
 
   .top__search--destination {
-    display: none;
+    padding: 0 0 0 8px;
+    font-weight: 500;
   }
 }
