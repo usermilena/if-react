@@ -1,0 +1,43 @@
+/* FOR DESKTOPS */
+
+.top__search--amount__wrapper {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 18px 0;
+  min-width: 290px;
+}
+
+@media (max-width: 768px) {
+  /* FOR MOBILES */
+
+  .top__search--amount__wrapper {
+    width: 100%;
+    flex: 1;
+    position: static;
+    background-color: var(--general-white);
+    border-radius: 4px;
+    margin-bottom: 8px;
+    padding: 6px 0 6px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* FOR TABLETS */
+
+  .top__search--amount__wrapper {
+    width: 100%;
+    flex: 1;
+    position: static;
+    background-color: var(--general-white);
+    border-radius: 4px;
+    margin-bottom: 8px;
+    padding: 6px 0 6px;
+  }
+
+  .top__search--amount__wrapper span {
+    display: none;
+  }
+}

@@ -1,0 +1,95 @@
+/* FOR DESKTOPS */
+
+.top__header--menu__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.top__header--menu {
+  display: contents;
+}
+
+.top__header--stays {
+  font-size: 24px;
+  color: var(--general-white);
+  position: relative;
+  cursor: pointer;
+}
+
+.top__header--stays:hover:after {
+  content: '';
+  background-color: var(--accent-yellow);
+  width: 50px;
+  height: 4px;
+  position: absolute;
+  bottom: -12px;
+  left: calc(50% - 50px / 2);
+  animation: jello-horizontal 0.5s linear both;
+}
+
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.top__header--attractions {
+  font-size: 24px;
+  color: var(--general-white);
+  margin-left: 24px;
+  position: relative;
+  cursor: pointer;
+}
+
+.top__header--attractions:hover:after {
+  content: '';
+  background-color: var(--accent-yellow);
+  width: 50px;
+  height: 4px;
+  position: absolute;
+  bottom: -12px;
+  left: calc(50% - 50px / 2);
+  animation: jello-horizontal 0.5s linear both 0.5s;
+}
+
+@media (max-width: 768px) {
+  /* FOR MOBILES */
+
+  .top__header--stays {
+    display: none;
+  }
+
+  .top__header--attractions {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* FOR TABLETS */
+
+  .top__header--stays {
+    display: none;
+  }
+
+  .top__header--attractions {
+    display: none;
+  }
+}

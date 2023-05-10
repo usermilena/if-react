@@ -1,11 +1,13 @@
 import React from "react";
 
-import "./Section.css"
+import classNames from "classnames";
 
-const Section = ({color, text, children}) => {
+import "./Section.css";
+
+const Section = ({ text, children, className }) => {
   return (
-    <section className={`section ${color}`}>
-      <h2 className="title">{text}</h2>
+    <section className={classNames("section", className)}>
+      {text && <h2 className="title">{text}</h2>}
       {children}
     </section>
   );

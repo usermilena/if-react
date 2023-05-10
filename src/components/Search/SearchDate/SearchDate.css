@@ -1,0 +1,119 @@
+/* FOR DESKTOPS */
+
+.top__search--date__wrapper {
+  position: relative;
+  width: 21%;
+  padding: 18px 0;
+  display: flex;
+  align-items: center;
+  min-width: 200px;
+}
+
+.top__search--date__label--desktop {
+  color: var(--general-white);
+  padding-left: 24px;
+  position: absolute;
+  top: -46px;
+}
+
+.top__search--date__label {
+  display: none;
+}
+
+.top__search--date__input {
+  outline: none;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  /* FOR MOBILES */
+
+  .top__search--date__wrapper {
+    position: relative;
+    border: none;
+    border-radius: 0;
+    flex: 1;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .top__search--date__label--desktop {
+    display: none;
+  }
+
+  .top__search--date__label {
+    display: flex;
+    font-size: 12px;
+    padding-bottom: 4px;
+  }
+
+  .top__search--date {
+    flex: 1;
+    background-color: var(--general-white);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 6px 0 6px 8px;
+  }
+
+  .top__search--date:last-child {
+    margin-left: 8px;
+  }
+
+  .top__search--date__wrapper span {
+    display: none;
+  }
+
+  .top__search--date__input {
+    font-weight: 500;
+    text-align: left;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* FOR TABLETS */
+
+  .top__search--date__wrapper {
+    position: relative;
+    border: none;
+    border-radius: 0;
+    flex: 1;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .top__search--date__label--desktop {
+    display: none;
+  }
+
+  .top__search--date__label {
+    display: flex;
+    font-size: 14px;
+    padding-bottom: 4px;
+  }
+
+  .top__search--date {
+    flex: 1;
+    background-color: var(--general-white);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 6px 0 6px 8px;
+  }
+
+  .top__search--date:last-child {
+    margin-left: 8px;
+  }
+
+  .top__search--date__wrapper span {
+    display: none;
+  }
+
+  .top__search--date__input {
+    font-weight: 500;
+    text-align: left;
+  }
+}

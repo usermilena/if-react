@@ -1,0 +1,60 @@
+/* FOR DESKTOPS */
+
+.top__search--calendar__wrapper {
+  border-radius: 8px;
+  background: var(--general-white);
+  padding: 12px 22px 18px;
+  display: none;
+  position: absolute;
+  top: 70px;
+  box-shadow: 0 2px 16px rgb(0 0 0 / 15%);
+}
+
+.calendarMonth:last-child {
+  padding-left: 44px;
+}
+
+.top__search--calendar__month {
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  padding-bottom: 11px;
+}
+
+.top__search--calendar__btn--prev {
+  height: 16px;
+  width: 6px;
+  fill: var(--general-white);
+  transform: rotate(180deg);
+  position: absolute;
+  top: 14px;
+  left: 27px;
+  cursor: pointer;
+}
+
+.top__search--calendar__btn--next {
+  height: 16px;
+  width: 6px;
+  fill: var(--general-white);
+  position: absolute;
+  top: 14px;
+  right: 27px;
+  cursor: pointer;
+}
+
+.top__search--calendar__week {
+  display: flex;
+}
+
+.top__search--calendar__day {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 14px;
+  color: #4d4d4d;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
