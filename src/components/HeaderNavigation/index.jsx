@@ -1,27 +1,25 @@
 import React from "react";
 
-import { AccountIcon, MenuIcon, ModeIcon } from "../Icons/Icons";
+import { AccountIcon, MenuIcon, ModeIcon } from "../Icons";
 
-import "./HeaderNavigation.css"
+import "./HeaderNavigation.css";
 
-const HeaderNavigation = () => {
+export const HeaderNavigation = () => {
   return (
     <nav className="top__header--menu__wrapper">
       <ul className="top__header--menu">
         <li className="top__header--stays">Stays</li>
         <li className="top__header--attractions">Attractions</li>
         <li>
-          <ModeIcon/>
+          <ModeIcon className="top__header--mode__icon" />
         </li>
         <li>
-          <AccountIcon/>
+          <AccountIcon className="top__header--account__icon" />
         </li>
         <li>
-          <MenuIcon/>
+          <MenuIcon className="top__header--menu__icon" />
         </li>
       </ul>
     </nav>
   );
 };
-
-export default HeaderNavigation;

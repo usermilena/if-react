@@ -17,7 +17,7 @@
 }
 
 .top__header--stays:hover:after {
-  content: '';
+  content: "";
   background-color: var(--accent-yellow);
   width: 50px;
   height: 4px;
@@ -60,7 +60,7 @@
 }
 
 .top__header--attractions:hover:after {
-  content: '';
+  content: "";
   background-color: var(--accent-yellow);
   width: 50px;
   height: 4px;
@@ -68,6 +68,24 @@
   bottom: -12px;
   left: calc(50% - 50px / 2);
   animation: jello-horizontal 0.5s linear both 0.5s;
+}
+
+.top__header--mode__icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 48px;
+  cursor: pointer;
+}
+
+.top__header--account__icon {
+  width: 40px;
+  height: 40px;
+  margin-left: 24px;
+  cursor: pointer;
+}
+
+.top__header--menu__icon {
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -80,6 +98,25 @@
   .top__header--attractions {
     display: none;
   }
+
+  .top__header--mode__icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .top__header--account__icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 16px;
+  }
+
+  .top__header--menu__icon {
+    display: flex;
+    width: 24px;
+    height: 16px;
+    margin-left: 16px;
+    cursor: pointer;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -91,5 +128,23 @@
 
   .top__header--attractions {
     display: none;
+  }
+
+  .top__header--mode__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .top__header--account__icon {
+    width: 32px;
+    height: 32px;
+    margin-left: 16px;
+  }
+
+  .top__header--menu__icon {
+    display: flex;
+    width: 32px;
+    height: 24px;
+    margin-left: 16px;
   }
 }

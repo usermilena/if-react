@@ -1,8 +1,8 @@
 import React from "react";
 
-import "./Calendar.css"
+import "./Calendar.css";
 
-const Calendar = () => {
+export const Calendar = () => {
   return (
     <div className="top__search--calendar__wrapper">
       <button id="btnPrev" type="button">
@@ -18,5 +18,3 @@ const Calendar = () => {
     </div>
   );
 };
-
-export default Calendar;

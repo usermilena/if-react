@@ -1,13 +1,13 @@
 import React from "react";
 
+import { SearchForm } from "../Search/SearchForm";
+
 import "./TopMain.css";
 
-import SearchForm from "../Search/SearchForm/SearchForm";
-
-const TopMain = ({
-  setIsVisible,
+export const TopMain = ({
   destinationInputValue,
   setDestinationInputValue,
+  setHotels,
 }) => {
   return (
     <main className="top__main--container col-lg-12 col-sm-6">
@@ -16,12 +16,10 @@ const TopMain = ({
         to live, work or just relax
       </h1>
       <SearchForm
-        setIsVisible={setIsVisible}
         destinationInputValue={destinationInputValue}
         setDestinationInputValue={setDestinationInputValue}
+        setHotels={setHotels}
       />
     </main>
   );
 };
-
-export default TopMain;

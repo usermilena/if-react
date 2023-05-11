@@ -1,10 +1,10 @@
 import React from "react";
 
-import "./HotelCard.css"
+import "./HotelCard.css";
 
-const HotelCard = ({ el }) => {
+export const HotelCard = ({ el }) => {
   return (
-    <li className="item" >
+    <li className="item">
       <img src={el.imageUrl} alt={el.name} />
       <span className="hotel">{el.name}</span>
       <span className="hotel--location">
@@ -13,5 +13,3 @@ const HotelCard = ({ el }) => {
     </li>
   );
 };
-
-export default HotelCard;

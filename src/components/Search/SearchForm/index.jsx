@@ -1,19 +1,24 @@
 import React from "react";
 
-import Button from "../../Button/Button";
-import SearchAmount from "../SearchAmount/SearchAmount";
-import SearchDate from "../SearchDate/SearchDate";
-import SearchDestination from "../SearchDestination/SearchDestination";
+import { Button } from "../../Button";
+import { SearchAmount } from "../SearchAmount";
+import { SearchDate } from "../SearchDate";
+import { SearchDestination } from "../SearchDestination";
+
+import { getData } from "../../../services/getData";
+import { hotelsUrl } from "../../../services/urls";
 
 import "./SearchForm.css";
 
-const SearchForm = ({
-  setIsVisible,
+export const SearchForm = ({
   destinationInputValue,
   setDestinationInputValue,
+  setHotels,
 }) => {
   const availableHotelsEvent = () => {
-    setIsVisible(true);
+    getData(hotelsUrl, destinationInputValue).then((hotels) =>
+      setHotels(hotels)
+    );
   };
 
   return (
@@ -28,5 +33,3 @@ const SearchForm = ({
     </form>
   );
 };
-
-export default SearchForm;
