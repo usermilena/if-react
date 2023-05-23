@@ -1,12 +1,10 @@
 import React from "react";
 
-import "./ChildrenAgeSelector.css"
+import "./ChildrenAgeSelector.css";
 
-const ChildrenAgeSelector = () => {
+export const ChildrenAgeSelector = () => {
   return (
-    <select
-      className="top__search--amount__filter--children__select"
-    >
+    <select className="top__search--amount__filter--children__select">
       <option value="0">0 years old</option>
       <option value="1">1 years old</option>
       <option value="2">2 years old</option>
@@ -28,5 +26,3 @@ const ChildrenAgeSelector = () => {
     </select>
   );
 };
-
-export default ChildrenAgeSelector;

@@ -4,7 +4,7 @@ import classNames from "classnames";
 
 import "./Section.css";
 
-const Section = ({ text, children, className }) => {
+export const Section = ({ text, children, className }) => {
   return (
     <section className={classNames("section", className)}>
       {text && <h2 className="title">{text}</h2>}
@@ -12,5 +12,3 @@ const Section = ({ text, children, className }) => {
     </section>
   );
 };
-
-export default Section;
