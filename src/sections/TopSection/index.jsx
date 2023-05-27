@@ -5,19 +5,11 @@ import { Section } from "../../components/Section";
 import { TopHeader } from "../../components/TopHeader";
 import { TopMain } from "../../components/TopMain";
 
-export const TopSection = ({
-  destinationInputValue,
-  setDestinationInputValue,
-  setHotels,
-}) => {
+export const TopSection = () => {
   return (
     <Section className="top">
       <TopHeader />
-      <TopMain
-        destinationInputValue={destinationInputValue}
-        setDestinationInputValue={setDestinationInputValue}
-        setHotels={setHotels}
-      />
+      <TopMain />
       <AppsFooter />
     </Section>
   );

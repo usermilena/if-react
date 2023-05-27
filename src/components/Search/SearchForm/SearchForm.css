@@ -10,6 +10,7 @@
   font-size: 18px;
   align-items: center;
   border-left: none;
+  position: relative;
 }
 
 .top__search ::placeholder {

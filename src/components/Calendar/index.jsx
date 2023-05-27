@@ -1,20 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 import "./Calendar.css";
 
-export const Calendar = () => {
+export const Calendar = ({ id }) => {
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(
+    new Date(Date.now() + 4 * 24 * 60 * 60 * 1000)
+  );
+
+  const onChange = (dates) => {
+    const [start, end] = dates;
+    setStartDate(start);
+    setEndDate(end);
+  };
+
   return (
-    <div className="top__search--calendar__wrapper">
-      <button id="btnPrev" type="button">
-        <svg className="top__search--calendar__btn--prev">
-          <use href="src/images/sprite.svg#arrowCalendar" />
-        </svg>
-      </button>
-      <button id="btnNext" type="button">
-        <svg className="top__search--calendar__btn--next">
-          <use href="src/images/sprite.svg#arrowCalendar" />
-        </svg>
-      </button>
-    </div>
+    <DatePicker
+      selected={startDate}
+      onChange={onChange}
+      startDate={startDate}
+      endDate={endDate}
+      minDate={new Date()}
+      selectsRange
+      monthsShown={2}
+      wrapperClassName="top-section__calendar--wrapper"
+      className="top-section__calendar"
+      id={id}
+    />
   );
 };

@@ -1,21 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 
-import { AvailableHotelsClass } from "../sections/AvailableHotelsClass";
-import { HomesGuestsLovesClass } from "../sections/HomesGuestsLovesClass";
+import { AvailableHotels } from "../sections/AvailableHotels";
+import { HomesGuestsLoves } from "../sections/HomesGuestsLoves";
 import { TopSection } from "../sections/TopSection";
 
+import { HotelsContextProvider } from "../contexts/HotelsContext";
+import { SearchContextProvider } from "../contexts/SearchContext";
+
 export const App = () => {
-  const [destinationInputValue, setDestinationInputValue] = useState("");
-  const [hotels, setHotels] = useState([]);
   return (
     <>
-      <TopSection
-        destinationInputValue={destinationInputValue}
-        setDestinationInputValue={setDestinationInputValue}
-        setHotels={setHotels}
-      />
-      <AvailableHotelsClass hotels={hotels} />
-      <HomesGuestsLovesClass />
+      <SearchContextProvider>
+        <HotelsContextProvider>
+          <TopSection />
+          <AvailableHotels />
+        </HotelsContextProvider>
+      </SearchContextProvider>
+      <HomesGuestsLoves />
     </>
   );
 };

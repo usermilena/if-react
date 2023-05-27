@@ -4,12 +4,13 @@ import { Input } from "../../Input";
 import { Label } from "../../Label";
 import { SearchIcon } from "../../Icons";
 
+import { useSearchContext } from "../../../contexts/SearchContext";
+
 import "./SearchDestination.css";
 
-export const SearchDestination = ({
-  destinationInputValue,
-  setDestinationInputValue,
-}) => {
+export const SearchDestination = () => {
+  const { setDestinationInputValue } = useSearchContext();
+
   return (
     <div id="destinationWrapper" className="top__search--destination__wrapper">
       <SearchIcon className="top__search--destination__search-icon" />
@@ -18,8 +19,6 @@ export const SearchDestination = ({
         onChange={(event) => setDestinationInputValue(event.target.value)}
         id="destination"
         placeholder="New York"
-        destinationInputValue={destinationInputValue}
-        setDestinationInputValue={setDestinationInputValue}
       />
     </div>
   );

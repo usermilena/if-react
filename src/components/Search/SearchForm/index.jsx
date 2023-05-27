@@ -6,27 +6,27 @@ import { SearchDate } from "../SearchDate";
 import { SearchDestination } from "../SearchDestination";
 
 import { getData } from "../../../services/getData";
+
 import { hotelsUrl } from "../../../services/urls";
+
+import { useSearchContext } from "../../../contexts/SearchContext";
+import { useHotelsContext } from "../../../contexts/HotelsContext";
 
 import "./SearchForm.css";
 
-export const SearchForm = ({
-  destinationInputValue,
-  setDestinationInputValue,
-  setHotels,
-}) => {
+export const SearchForm = () => {
+  const { destinationInputValue } = useSearchContext();
+  const { setHotels } = useHotelsContext();
+
   const availableHotelsEvent = () => {
-    getData(hotelsUrl, destinationInputValue).then((hotels) =>
-      setHotels(hotels)
-    );
+    getData(hotelsUrl, destinationInputValue).then((hotels) => {
+      setHotels(hotels);
+    });
   };
 
   return (
     <form className="top__search">
-      <SearchDestination
-        destinationInputValue={destinationInputValue}
-        setDestinationInputValue={setDestinationInputValue}
-      />
+      <SearchDestination />
       <SearchDate />
       <SearchAmount />
       <Button onClick={availableHotelsEvent} text="Search" />

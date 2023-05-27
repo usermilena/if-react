@@ -2,7 +2,6 @@ import React from "react";
 
 import { Input } from "../Input";
 import { Label } from "../Label";
-
 import "./AmountItem.css";
 
 export const AmountItem = ({ id, value, text }) => {

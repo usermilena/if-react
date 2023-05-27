@@ -1,8 +1,0 @@
-/* FOR DESKTOPS*/
-
-.top__search--amount__filter--children__select {
-  border: 1px solid var(--accent-blue);
-  width: 99px;
-  height: 30px;
-  display: none;
-}

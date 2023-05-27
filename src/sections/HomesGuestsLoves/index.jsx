@@ -2,11 +2,10 @@ import React, { useEffect, useState } from "react";
 
 import { HotelsList } from "../../components/HotelsList";
 import { Section } from "../../components/Section";
-
 import { getData } from "../../services/getData";
 import { popularHotelsUrl } from "../../services/urls";
 
-export const HomesGuestsLovesClass = () => {
+export const HomesGuestsLoves = () => {
   const [popularHotels, setPopularHotels] = useState([]);
 
   useEffect(() => {
