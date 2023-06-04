@@ -1,5 +1,3 @@
-/* FOR DESKTOPS*/
-
 .top__search--amount__filter--options__wrapper {
   display: flex;
   align-items: center;
@@ -11,19 +9,12 @@
   margin: 12px 0;
 }
 
-.top__search--amount__filter--count__wrapper {
+.top__search--amount__filter--button__wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 108px;
   justify-content: space-between;
-}
-
-#minusAdults,
-#minusChildren,
-#minusRooms {
-  color: #cecece;
-  border-color: #cecece;
 }
 
 .top__search--amount__filter--button {
@@ -38,4 +29,10 @@
   align-items: center;
   justify-content: center;
   user-select: none;
+  cursor: pointer;
+}
+
+.top__search--amount__filter--button.disabled {
+  color: #cecece;
+  border-color: #cecece;
 }

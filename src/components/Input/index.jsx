@@ -1,13 +1,11 @@
 import React from "react";
 
-import "./Input.css";
-
 export const Input = ({
   onChange,
   id,
   placeholder,
   autoComplete = "off",
-  className = "top__search--destination",
+  className,
   value,
   readOnly,
 }) => {

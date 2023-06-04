@@ -3,7 +3,6 @@ import React from "react";
 import classNames from "classnames";
 
 import { HotelCard } from "../HotelCard";
-
 import "./HotelsList.css";
 
 export const HotelsList = ({ data, className }) => {

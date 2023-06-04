@@ -1,8 +1,13 @@
 /* FOR DESKTOPS */
 
 .top__search--destination__wrapper {
-  position: relative;
   width: 38%;
+}
+
+.top__search--destination {
+  padding: 21px 0 21px 24px;
+  outline: none;
+  border-radius: 8px;
 }
 
 .top__search--destination__search-icon {
