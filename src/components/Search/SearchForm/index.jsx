@@ -1,17 +1,13 @@
 import React from "react";
 
+import { useHotelsContext } from "../../../contexts/HotelsContext";
+import { useSearchContext } from "../../../contexts/SearchContext";
+import { getData } from "../../../services/getData";
+import { hotelsUrl } from "../../../services/urls";
 import { Button } from "../../Button";
 import { SearchAmount } from "../SearchAmount";
 import { SearchDate } from "../SearchDate";
 import { SearchDestination } from "../SearchDestination";
-
-import { getData } from "../../../services/getData";
-
-import { hotelsUrl } from "../../../services/urls";
-
-import { useSearchContext } from "../../../contexts/SearchContext";
-import { useHotelsContext } from "../../../contexts/HotelsContext";
-
 import "./SearchForm.css";
 
 export const SearchForm = () => {

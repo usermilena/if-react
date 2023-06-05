@@ -1,11 +1,9 @@
 import React from "react";
 
+import { useSearchContext } from "../../../contexts/SearchContext";
+import { SearchIcon } from "../../Icons";
 import { Input } from "../../Input";
 import { Label } from "../../Label";
-import { SearchIcon } from "../../Icons";
-
-import { useSearchContext } from "../../../contexts/SearchContext";
-
 import "./SearchDestination.css";
 
 export const SearchDestination = () => {
@@ -19,6 +17,7 @@ export const SearchDestination = () => {
         onChange={(event) => setDestinationInputValue(event.target.value)}
         id="destination"
         placeholder="New York"
+        className="top__search--destination"
       />
     </div>
   );
