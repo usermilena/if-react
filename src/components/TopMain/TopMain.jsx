@@ -1,7 +1,6 @@
 import React from "react";
 
 import { SearchForm } from "../Search/SearchForm";
-
 import "./TopMain.css";
 
 export const TopMain = () => {

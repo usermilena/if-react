@@ -2,7 +2,6 @@ import React from "react";
 
 import { HeaderNavigation } from "../HeaderNavigation";
 import { LogoIcon } from "../Icons";
-
 import "./TopHeader.css";
 
 export const TopHeader = () => {
