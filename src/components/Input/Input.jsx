@@ -1,24 +1,26 @@
 import React from "react";
 
+import { func, string } from "prop-types";
+
 export const Input = ({
   onChange,
-  id,
   placeholder,
   autoComplete = "off",
   className,
-  value,
-  readOnly,
 }) => {
   return (
     <input
-      id={id}
-      name={id}
       className={className}
       placeholder={placeholder}
       autoComplete={autoComplete}
       onChange={onChange}
-      defaultValue={value}
-      readOnly={readOnly}
     />
   );
+};
+
+Input.propTypes = {
+  onChange: func,
+  placeholder: string,
+  autoComplete: string,
+  className: string,
 };

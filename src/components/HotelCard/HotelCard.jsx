@@ -1,5 +1,7 @@
 import React from "react";
 
+import { object } from "prop-types";
+
 import "./HotelCard.css";
 
 export const HotelCard = ({ el }) => {
@@ -12,4 +14,8 @@ export const HotelCard = ({ el }) => {
       </span>
     </li>
   );
+};
+
+HotelCard.propTypes = {
+  el: object.isRequired,
 };

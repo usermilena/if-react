@@ -9,10 +9,9 @@ export const SearchDate = () => {
     <>
       <Label
         className="top__search--date__label"
-        htmlFor="calendar"
         text="Check-in — Check-out"
       ></Label>
-      <Calendar id="calendar"></Calendar>
+      <Calendar></Calendar>
     </>
   );
 };

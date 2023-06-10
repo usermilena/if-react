@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Suspense } from "react";
+import Skeleton from "react-loading-skeleton";
 
 import { HotelsContextProvider } from "../contexts/HotelsContext";
 import { SearchContextProvider } from "../contexts/SearchContext";
@@ -12,7 +13,9 @@ export const App = () => {
       <SearchContextProvider>
         <HotelsContextProvider>
           <TopSection />
-          <AvailableHotels />
+          <Suspense fallback={<Skeleton />}>
+            <AvailableHotels />
+          </Suspense>
         </HotelsContextProvider>
       </SearchContextProvider>
       <HomesGuestsLoves />

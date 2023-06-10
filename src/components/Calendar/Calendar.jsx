@@ -4,7 +4,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 import "./Calendar.css";
 
-export const Calendar = ({ id }) => {
+export const Calendar = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(
     new Date(Date.now() + 4 * 24 * 60 * 60 * 1000)
@@ -27,7 +27,6 @@ export const Calendar = ({ id }) => {
       monthsShown={2}
       wrapperClassName="top-section__calendar--wrapper"
       className="top-section__calendar"
-      id={id}
     />
   );
 };

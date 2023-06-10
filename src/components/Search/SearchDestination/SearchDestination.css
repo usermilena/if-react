@@ -14,6 +14,13 @@
   display: none;
 }
 
+.top__search--destination__label {
+  color: var(--general-white);
+  padding: 0 24px;
+  position: absolute;
+  top: -48px;
+}
+
 @media (max-width: 768px) {
   /* FOR MOBILES */
 

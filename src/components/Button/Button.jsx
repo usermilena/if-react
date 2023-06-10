@@ -1,5 +1,7 @@
 import React from "react";
 
+import { string, func } from "prop-types";
+
 import "./Button.css";
 
 export const Button = ({
@@ -12,4 +14,10 @@ export const Button = ({
       {text}
     </button>
   );
+};
+
+Button.propTypes = {
+  onClick: func,
+  text: string,
+  className: string,
 };

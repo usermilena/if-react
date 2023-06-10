@@ -1,8 +1,0 @@
-/* FOR DESKTOPS */
-
-.top__search--destination__label {
-  color: var(--general-white);
-  padding: 0 24px;
-  position: absolute;
-  top: -48px;
-}

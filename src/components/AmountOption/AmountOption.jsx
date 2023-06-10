@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import classNames from "classnames";
+import { func, number, string } from "prop-types";
 
 import { Button } from "../Button";
 import "./AmountOption.css";
@@ -61,4 +62,12 @@ export const AmountOption = ({
       </div>
     </div>
   );
+};
+
+AmountOption.propTypes = {
+  title: string.isRequired,
+  minValue: number.isRequired,
+  maxValue: number.isRequired,
+  value: number.isRequired,
+  setValue: func.isRequired,
 };

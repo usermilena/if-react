@@ -1,6 +1,7 @@
 import React from "react";
 
 import classNames from "classnames";
+import { array, string } from "prop-types";
 
 import { HotelCard } from "../HotelCard";
 import "./HotelsList.css";
@@ -16,4 +17,9 @@ export const HotelsList = ({ data, className }) => {
       </div>
     </ul>
   );
+};
+
+HotelsList.propTypes = {
+  data: array.isRequired,
+  className: string,
 };
