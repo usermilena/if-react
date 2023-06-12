@@ -11,10 +11,11 @@ import { SearchDestination } from "../SearchDestination";
 import "./SearchForm.css";
 
 export const SearchForm = () => {
-  const { destinationInputValue } = useSearchContext();
   const { setHotels } = useHotelsContext();
 
-  const availableHotelsEvent = () => {
+  const useAvailableHotelsEvent = () => {
+    const { destinationInputValue } = useSearchContext();
+
     getData(hotelsUrl, destinationInputValue).then((hotels) => {
       setHotels(hotels);
     });
@@ -25,7 +26,7 @@ export const SearchForm = () => {
       <SearchDestination />
       <SearchDate />
       <SearchAmount />
-      <Button onClick={availableHotelsEvent} text="Search" />
+      <Button onClick={useAvailableHotelsEvent} text="Search" />
     </form>
   );
 };
