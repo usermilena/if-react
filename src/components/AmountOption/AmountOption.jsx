@@ -3,7 +3,7 @@ import React, { memo, useState } from "react";
 import classNames from "classnames";
 import { func, number, string } from "prop-types";
 
-import { Button } from "../Button";
+import { IconButton } from "../IconButton";
 import "./AmountOption.css";
 
 export const AmountOption = memo(
@@ -41,18 +41,18 @@ export const AmountOption = memo(
       <div className="top__search--amount__filter--options__wrapper">
         <p>{title}</p>
         <div className="top__search--amount__filter--button__wrapper">
-          <Button
+          <IconButton
             text="–"
             onClick={decreaseOption}
-            className={classNames("top__search--amount__filter--button", {
+            className={classNames({
               disabled: decraseDisabled,
             })}
           />
           <p>{value}</p>
-          <Button
+          <IconButton
             text="+"
             onClick={increaseOption}
-            className={classNames("top__search--amount__filter--button", {
+            className={classNames({
               disabled: increaseDisabled,
             })}
           />
