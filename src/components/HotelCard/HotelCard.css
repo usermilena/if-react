@@ -1,10 +1,6 @@
 /* FOR DESKTOPS: */
 
 .item {
-  display: none;
-}
-
-.item:nth-child(-n + 4) {
   display: flex;
   flex-direction: column;
   font-size: 24px;
@@ -38,14 +34,6 @@
     font-size: 12px;
   }
 
-  .item:nth-child(3) {
-    display: none;
-  }
-
-  .item:nth-child(4) {
-    display: none;
-  }
-
   .item > img {
     width: 156px;
     height: 156px;
@@ -59,16 +47,3 @@
     margin-top: 4px;
   }
 }
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  /* FOR TABLETS: */
-
-  .item:nth-child(3) {
-    display: none;
-  }
-
-  .item:nth-child(4) {
-    display: none;
-  }
-}
-
