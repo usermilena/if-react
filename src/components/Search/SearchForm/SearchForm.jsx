@@ -18,6 +18,11 @@ export const SearchForm = () => {
     getData(hotelsUrl, destinationInputValue).then((hotels) => {
       setHotels(hotels);
     });
+
+    window.scrollTo({
+      top: 902,
+      behavior: "smooth",
+    });
   };
 
   return (
