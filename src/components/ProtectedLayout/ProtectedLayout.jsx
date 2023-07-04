@@ -1,14 +1,20 @@
-import React from "react";
-import { Navigate, Outlet } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { Outlet, useNavigate } from "react-router-dom";
 
-import { useAuth } from "../../contexts/AuthContext";
+import { authStatuses } from "../../constants/authStatuses";
 
 export const ProtectedLayout = () => {
-  const { user } = useAuth();
+  const loggedOut = useSelector(
+    (state) => state.auth.status === authStatuses.loggedOut
+  );
+  const navigate = useNavigate();
 
-  if (!user) {
-    return <Navigate to="/login" />;
-  }
+  useEffect(() => {
+    if (loggedOut) {
+      navigate("/login");
+    }
+  }, [loggedOut, navigate]);
 
   return <Outlet />;
 };

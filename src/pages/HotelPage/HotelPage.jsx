@@ -10,7 +10,7 @@ import { getData } from "../../services/getData";
 import styles from "./HotelPage.module.css";
 
 export const HotelPage = () => {
-  const [hotel, setHotel] = useState([]);
+  const [hotel, setHotel] = useState({});
 
   let { hotelId } = useParams();
 

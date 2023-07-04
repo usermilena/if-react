@@ -1,8 +1,8 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 import { hotelsUrl } from "../../../constants/urls";
 import { useHotelsContext } from "../../../contexts/HotelsContext";
-import { useSearchContext } from "../../../contexts/SearchContext";
 import { getData } from "../../../services/getData";
 import { Button } from "../../Button";
 import { SearchAmount } from "../SearchAmount";
@@ -12,8 +12,10 @@ import "./SearchForm.css";
 
 export const SearchForm = () => {
   const { setHotels } = useHotelsContext();
-  const { destinationInputValue } = useSearchContext();
 
+  const destinationInputValue = useSelector((state) => {
+    return state.search.hotels;
+  });
   const availableHotelsEvent = () => {
     getData(hotelsUrl, destinationInputValue).then((hotels) => {
       setHotels(hotels);

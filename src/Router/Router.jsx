@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-import { ProtectedLayout } from "../components/ProtectedLayout/ProtectedLayout";
+import { ProtectedLayout } from "../components/ProtectedLayout";
 import { Home } from "../pages/Home";
 import { HotelPage } from "../pages/HotelPage";
 import { LoginPage } from "../pages/LoginPage";
