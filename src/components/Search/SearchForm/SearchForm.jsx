@@ -1,9 +1,9 @@
 import React from "react";
 
+import { hotelsUrl } from "../../../constants/urls";
 import { useHotelsContext } from "../../../contexts/HotelsContext";
 import { useSearchContext } from "../../../contexts/SearchContext";
 import { getData } from "../../../services/getData";
-import { hotelsUrl } from "../../../services/urls";
 import { Button } from "../../Button";
 import { SearchAmount } from "../SearchAmount";
 import { SearchDate } from "../SearchDate";

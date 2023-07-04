@@ -27,6 +27,16 @@
   animation: jello-horizontal 0.5s linear both;
 }
 
+.accont__icon--wrapper {
+  position: relative;
+}
+
+.accont__icon--dropdown--wrapper {
+  position: absolute;
+  right: 0;
+  bottom: -36px;
+}
+
 @keyframes jello-horizontal {
   0% {
     transform: scale3d(1, 1, 1);
