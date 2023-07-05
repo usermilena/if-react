@@ -1,7 +1,19 @@
+import { combineReducers } from "@reduxjs/toolkit";
+import { persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
+
 import { authReducer } from "./auth.slice";
 import { searchHotelsReducer } from "./searchHotels.slice";
 
-export const rootReducer = {
-  auth: authReducer,
-  search: searchHotelsReducer,
+const persistConfig = {
+  key: "root",
+  storage,
 };
+
+export const rootReducer = persistReducer(
+  persistConfig,
+  combineReducers({
+    auth: authReducer,
+    search: searchHotelsReducer,
+  })
+);
