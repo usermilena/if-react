@@ -15,7 +15,7 @@ export const AmountOption = memo(
 
     const decreaseOption = () => {
       if (value > minValue) {
-        setValue((prev) => (prev -= 1));
+        setValue(value - 1);
         setDecraseDisabled(false);
         setIncreaseDisabled(false);
       }
@@ -27,7 +27,7 @@ export const AmountOption = memo(
 
     const increaseOption = () => {
       if (value < maxValue) {
-        setValue((prev) => (prev += 1));
+        setValue(value + 1);
         setDecraseDisabled(false);
         setIncreaseDisabled(false);
       }
