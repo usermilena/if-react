@@ -1,13 +1,17 @@
 import React from "react";
+import { useTheme } from "react-jss";
 
 import { AppStoreIcon, GooglePlayIcon } from "../Icons";
-import "./AppsFooter.css";
+import { useAppsFooterStyles } from "./AppsFooter.styles";
 
 export const AppsFooter = () => {
+  const theme = useTheme();
+  const classes = useAppsFooterStyles({ theme });
+
   return (
-    <div className="top__apps">
-      <GooglePlayIcon className="top__apps--google-play" />
-      <AppStoreIcon className="top__apps--app-store" />
+    <div className={classes.root}>
+      <GooglePlayIcon className={classes.googlePlay} />
+      <AppStoreIcon className={classes.appStore} />
     </div>
   );
 };
