@@ -12,8 +12,3 @@
   user-select: none;
   cursor: pointer;
 }
-
-.top__search--amount__filter--button.disabled {
-  color: #cecece;
-  border-color: #cecece;
-}
