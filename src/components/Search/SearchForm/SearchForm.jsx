@@ -1,9 +1,8 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
-import { hotelsUrl } from "../../../constants/urls";
-import { useHotelsContext } from "../../../contexts/HotelsContext";
-import { getData } from "../../../services/getData";
+import { useGetHotelsMutation } from "../../../services";
+import { setHotels } from "../../../store/slices/hotels.slice";
 import { Button } from "../../Button";
 import { SearchAmount } from "../SearchAmount";
 import { SearchDate } from "../SearchDate";
@@ -11,15 +10,26 @@ import { SearchDestination } from "../SearchDestination";
 import "./SearchForm.css";
 
 export const SearchForm = () => {
-  const { setHotels } = useHotelsContext();
+  const destination = useSelector((state) => state.hotels.destination);
+  const dateFrom = useSelector((state) => state.hotels.dateFrom);
+  const dateTo = useSelector((state) => state.hotels.dateTo);
+  const adults = useSelector((state) => state.hotels.adults);
+  const children = useSelector((state) => state.hotels.children);
+  const rooms = useSelector((state) => state.hotels.rooms);
 
-  const destinationInputValue = useSelector((state) => {
-    return state.search.hotels;
-  });
-  const availableHotelsEvent = () => {
-    getData(hotelsUrl, destinationInputValue).then((hotels) => {
-      setHotels(hotels);
+  const [getHotels] = useGetHotelsMutation();
+  const dispatch = useDispatch();
+
+  const availableHotelsEvent = async () => {
+    const res = await getHotels({
+      destination,
+      dateFrom,
+      dateTo,
+      adults,
+      children,
+      rooms,
     });
+    dispatch(setHotels(res.data));
 
     window.scrollTo({
       top: 902,

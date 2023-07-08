@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import persistStore from "redux-persist/es/persistStore";
 
+import { hotels } from "../services";
 import { rootReducer } from "./slices";
 
 export const store = configureStore({
@@ -8,10 +9,8 @@ export const store = configureStore({
   devTools: process.env.NODE_ENV !== "production",
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
-      serializableCheck: {
-        ignoreActions: ["persist/PERSIST"],
-      },
-    }),
+      serializableCheck: false,
+    }).concat(hotels.middleware),
 });
 
 export const persistor = persistStore(store);
