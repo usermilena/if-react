@@ -1,7 +1,6 @@
 import React from "react";
 
 import { AccountIcon, MenuIcon, ModeIcon } from "../Icons";
-
 import "./HeaderNavigation.css";
 
 export const HeaderNavigation = () => {

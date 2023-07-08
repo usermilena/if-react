@@ -1,5 +1,6 @@
 import React from "react";
 
+import { string } from "prop-types";
 import { v4 as uuidv4 } from "uuid";
 
 export const ChildrenSelector = ({ className }) => {
@@ -12,4 +13,8 @@ export const ChildrenSelector = ({ className }) => {
         ))}
     </select>
   );
+};
+
+ChildrenSelector.propTypes = {
+  className: string,
 };

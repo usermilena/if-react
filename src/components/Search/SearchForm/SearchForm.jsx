@@ -11,12 +11,17 @@ import { SearchDestination } from "../SearchDestination";
 import "./SearchForm.css";
 
 export const SearchForm = () => {
-  const { destinationInputValue } = useSearchContext();
   const { setHotels } = useHotelsContext();
+  const { destinationInputValue } = useSearchContext();
 
   const availableHotelsEvent = () => {
     getData(hotelsUrl, destinationInputValue).then((hotels) => {
       setHotels(hotels);
+    });
+
+    window.scrollTo({
+      top: 902,
+      behavior: "smooth",
     });
   };
 

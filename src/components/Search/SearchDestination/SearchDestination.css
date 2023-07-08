@@ -8,10 +8,18 @@
   padding: 21px 0 21px 24px;
   outline: none;
   border-radius: 8px;
+  width: 100%;
 }
 
 .top__search--destination__search-icon {
   display: none;
+}
+
+.top__search--destination__label {
+  color: var(--general-white);
+  padding: 0 24px;
+  position: absolute;
+  top: -48px;
 }
 
 @media (max-width: 768px) {

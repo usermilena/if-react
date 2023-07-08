@@ -1,6 +1,7 @@
 import React from "react";
 
 import classNames from "classnames";
+import { string, node } from "prop-types";
 
 import "./Section.css";
 
@@ -11,4 +12,10 @@ export const Section = ({ text, children, className }) => {
       {children}
     </section>
   );
+};
+
+Section.propTypes = {
+  text: string,
+  className: string,
+  children: node.isRequired,
 };

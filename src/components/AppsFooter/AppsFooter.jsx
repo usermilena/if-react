@@ -1,7 +1,6 @@
 import React from "react";
 
 import { AppStoreIcon, GooglePlayIcon } from "../Icons";
-
 import "./AppsFooter.css";
 
 export const AppsFooter = () => {

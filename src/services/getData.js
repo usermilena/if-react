@@ -6,5 +6,6 @@ export const getData = async (url, query) => {
       search: query,
     },
   });
+
   return data;
 };
