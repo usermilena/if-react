@@ -1,7 +1,7 @@
-@import url("fonts.css");
+@import url('fonts.css');
 
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   color: var(--text-color);
   line-height: 1.17em;
@@ -34,11 +34,11 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input[type="number"] {
+input[type='number'] {
   -moz-appearance: textfield;
 }
 
-input[type="radio"] {
+input[type='radio'] {
   display: none;
 }
 
@@ -148,3 +148,5 @@ a {
     width: calc(var(--col-sm) * 6);
   }
 }
+
+

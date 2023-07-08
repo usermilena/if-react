@@ -1,15 +1,11 @@
 import React from "react";
-import { useTheme } from "react-jss";
 import { useDispatch } from "react-redux";
 
 import { authStatuses } from "../../constants/authStatuses";
 import { setStatus } from "../../store/slices/auth.slice";
-import { useDropDownStyles } from "./DropDown.styles";
+import "./DropDown.css";
 
 export const DropDown = ({ className }) => {
-  const theme = useTheme();
-  const classes = useDropDownStyles({ theme });
-
   const dispatch = useDispatch();
 
   return (
@@ -17,7 +13,7 @@ export const DropDown = ({ className }) => {
       className={className}
       onClick={() => dispatch(setStatus(authStatuses.loggedOut))}
     >
-      <button type="text" className={classes.root}>
+      <button type="text" className="accont__icon--dropdown">
         Sign out
       </button>
     </div>

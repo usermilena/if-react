@@ -1,16 +1,16 @@
 import React from "react";
-import { useTheme } from "react-jss";
 
 import { string, func } from "prop-types";
 
-import { useButtonStyles } from "./Button.styles";
+import "./Button.css";
 
-export const Button = ({ onClick, text }) => {
-  const theme = useTheme();
-  const classes = useButtonStyles({ theme });
-
+export const Button = ({
+  onClick,
+  text,
+  className = "top__search--button",
+}) => {
   return (
-    <button type="button" onClick={onClick} className={classes.root}>
+    <button type="button" onClick={onClick} className={className}>
       {text}
     </button>
   );

@@ -1,16 +1,13 @@
 import React, { memo, useState } from "react";
-import { useTheme } from "react-jss";
 
+import classNames from "classnames";
 import { func, number, string } from "prop-types";
 
 import { IconButton } from "../IconButton";
-import { useAmountOptionStyles } from "./AmountOption.styles";
+import "./AmountOption.css";
 
 export const AmountOption = memo(
   ({ title, minValue, maxValue, value, setValue }) => {
-    const theme = useTheme();
-    const classes = useAmountOptionStyles({ theme });
-
     const [decraseDisabled, setDecraseDisabled] = useState(value === minValue);
     const [increaseDisabled, setIncreaseDisabled] = useState(
       value === maxValue
@@ -41,19 +38,23 @@ export const AmountOption = memo(
     };
 
     return (
-      <div className={classes.root}>
+      <div className="top__search--amount__filter--options__wrapper">
         <p>{title}</p>
-        <div className={classes.buttonsWrapper}>
+        <div className="top__search--amount__filter--button__wrapper">
           <IconButton
             text="–"
             onClick={decreaseOption}
-            className={decraseDisabled ? classes.buttonDisabled : ""}
+            className={classNames({
+              disabled: decraseDisabled,
+            })}
           />
           <p>{value}</p>
           <IconButton
             text="+"
             onClick={increaseOption}
-            className={increaseDisabled ? classes.buttonDisabled : ""}
+            className={classNames({
+              disabled: increaseDisabled,
+            })}
           />
         </div>
       </div>
