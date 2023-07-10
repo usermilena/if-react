@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 import "./Calendar.css";
 
-export const Calendar = () => {
+export const Calendar = memo(() => {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(
     new Date(Date.now() + 4 * 24 * 60 * 60 * 1000)
@@ -29,4 +29,6 @@ export const Calendar = () => {
       className="top-section__calendar"
     />
   );
-};
+});
+
+Calendar.displayName = "Calendar";

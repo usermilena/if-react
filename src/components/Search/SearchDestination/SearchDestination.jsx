@@ -1,13 +1,18 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 
-import { useSearchContext } from "../../../contexts/SearchContext";
+import { setSearchHotels } from "../../../store/actions/searchHotels.action";
 import { SearchIcon } from "../../Icons";
 import { Input } from "../../Input";
 import { Label } from "../../Label";
 import "./SearchDestination.css";
 
 export const SearchDestination = () => {
-  const { setDestinationInputValue } = useSearchContext();
+  const dispatch = useDispatch();
+
+  const handleChange = (event) => {
+    dispatch(setSearchHotels(event.target.value));
+  };
 
   return (
     <div id="destinationWrapper" className="top__search--destination__wrapper">
@@ -17,7 +22,7 @@ export const SearchDestination = () => {
         text="Your destination or hotel name"
       />
       <Input
-        onChange={(event) => setDestinationInputValue(event.target.value)}
+        onChange={handleChange}
         placeholder="New York"
         className="top__search--destination"
       />

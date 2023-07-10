@@ -1,21 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-import { object } from "prop-types";
+import classNames from "classnames";
+import { object, string } from "prop-types";
 
 import "./HotelCard.css";
 
-export const HotelCard = ({ el }) => {
+export const HotelCard = ({ el, className }) => {
   return (
-    <div className="item">
+    <Link className={classNames(className, "item")} to={`/hotels/${el.id}`}>
       <img src={el.imageUrl} alt={el.name} />
       <span className="hotel">{el.name}</span>
       <span className="hotel--location">
         {el.city}, {el.country}
       </span>
-    </div>
+    </Link>
   );
 };
 
 HotelCard.propTypes = {
   el: object.isRequired,
+  className: string,
 };
