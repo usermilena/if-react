@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "../../components/Button";
 import { TopHeader } from "../../components/TopHeader";
 import { authStatuses } from "../../constants/authStatuses";
-import { setAuthStatus } from "../../store/actions/auth.action";
+import { setStatus } from "../../store/slices/auth.slice";
 import "./LoginPage.css";
 
 export const LoginPage = () => {
@@ -22,7 +22,7 @@ export const LoginPage = () => {
         <Button
           text="Continue"
           onClick={() => {
-            dispatch(setAuthStatus(authStatuses.loggedIn));
+            dispatch(setStatus(authStatuses.loggedIn));
             navigate("/");
           }}
         />
